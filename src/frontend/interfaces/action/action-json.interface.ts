@@ -1,4 +1,4 @@
-import type { ButtonProps, IconProps, VariantType } from '@adminjs/design-system'
+import type { ButtonProps, IconProps, VariantType } from '@clement_lores/admin-design-system'
 
 import { ParsedLayoutElement } from '../../../backend/utils/layout-element-parser/index.js'
 

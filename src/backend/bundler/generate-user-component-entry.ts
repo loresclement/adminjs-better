@@ -22,7 +22,11 @@ const generateUserComponentEntry = (admin: AdminJS, entryPath: string): string =
 
   const absoluteEntryPath = path.resolve(entryPath)
 
-  const setupPart = 'AdminJS.UserComponents = {}\n'
+  const setupPart = [
+    "import AdminJS from '@clement_lores/adminjs'",
+    'AdminJS.UserComponents = {}',
+    '',
+  ].join('\n')
 
   const envPart = Object.keys(env).map((envKey) => (
     `AdminJS.env.${envKey} = ${JSON.stringify(env[envKey])}\n`

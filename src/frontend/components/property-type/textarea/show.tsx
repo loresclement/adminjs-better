@@ -1,5 +1,5 @@
 import React from 'react'
-import { ValueGroup } from '@adminjs/design-system'
+import { ValueGroup } from '@clement_lores/admin-design-system'
 
 import allowOverride from '../../../hoc/allow-override.js'
 import { ShowPropertyProps } from '../base-property-props.js'

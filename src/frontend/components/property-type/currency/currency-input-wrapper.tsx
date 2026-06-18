@@ -1,4 +1,4 @@
-import { CurrencyInput, CurrencyInputProps } from '@adminjs/design-system'
+import { CurrencyInput, CurrencyInputProps } from '@clement_lores/admin-design-system'
 import React, { FC, useState } from 'react'
 
 import allowOverride from '../../../hoc/allow-override.js'

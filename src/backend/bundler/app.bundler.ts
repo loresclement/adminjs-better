@@ -13,9 +13,15 @@ import { NODE_ENV } from './utils/constants.js'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
+console.log('[AdminJS bundler] app bundler start')
+
 const input: InputOptions = {
   input: path.join(__dirname, '../../frontend/bundle-entry.js'),
-  external: AssetBundler.DEFAULT_EXTERNALS,
+  external: (id: string) => {
+    return AssetBundler.DEFAULT_EXTERNALS.some((pkg) => {
+      return id === pkg || id.startsWith(`${pkg}/`)
+    })
+  },
   plugins: [
     resolve({
       extensions: AssetBundler.DEFAULT_EXTENSIONS,

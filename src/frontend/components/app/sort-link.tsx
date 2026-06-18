@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from 'react'
 import { useLocation, NavLink } from 'react-router-dom'
-import { Icon, cssClass } from '@adminjs/design-system'
+import { Icon, cssClass } from '@clement_lores/admin-design-system'
 
 import { BasePropertyJSON } from '../../interfaces/index.js'
 import { useTranslation } from '../../hooks/index.js'

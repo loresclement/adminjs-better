@@ -18,7 +18,7 @@ const resolveDesignSystemBundle = (): string => {
   const require = createRequire(import.meta.url)
 
   return path.join(
-    path.parse(require.resolve('@adminjs/design-system')).dir,
+    path.parse(require.resolve('@clement_lores/admin-design-system')).dir,
     `../bundle.${NODE_ENV}.js`,
   )
 }

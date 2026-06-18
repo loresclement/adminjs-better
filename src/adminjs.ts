@@ -179,10 +179,16 @@ class AdminJS {
    * @return  {Promise<never>}
    */
   async watch(): Promise<string | undefined> {
+    console.log('[AdminJS watch] start')
+
     if (process.env.NODE_ENV !== 'production') {
+
+      console.log('[AdminJS watch] before create entry')
       await componentsBundler.createEntry({
         content: generateEntry(this, ADMIN_JS_TMP_DIR),
       })
+
+      console.log('[AdminJS watch] before componentsBundler.watch')
       await componentsBundler.watch()
     }
     return undefined

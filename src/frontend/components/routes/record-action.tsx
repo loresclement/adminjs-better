@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useParams } from 'react-router'
-import { Loader } from '@adminjs/design-system'
+import { Loader } from '@clement_lores/admin-design-system'
 
 import { ErrorTypeEnum } from '../../../utils/error-type.enum.js'
 import BaseActionComponent from '../app/base-action-component.js'

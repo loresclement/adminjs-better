@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormGroup, Label, DatePicker } from '@adminjs/design-system'
+import { FormGroup, Label, DatePicker } from '@clement_lores/admin-design-system'
 
 import * as BackendFilter from '../../../../backend/utils/filter/filter.js'
 import { useTranslation } from '../../../hooks/use-translation.js'

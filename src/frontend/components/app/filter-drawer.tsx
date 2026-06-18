@@ -1,4 +1,4 @@
-import { Box, Button, Drawer, DrawerContent, DrawerFooter, H3, Icon } from '@adminjs/design-system'
+import { Box, Button, Drawer, DrawerContent, DrawerFooter, H3, Icon } from '@clement_lores/admin-design-system'
 import isNil from 'lodash/isNil.js'
 import pickBy from 'lodash/pickBy.js'
 import React, { FormEventHandler, useEffect, useRef, useState } from 'react'

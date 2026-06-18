@@ -13,7 +13,7 @@ property: `name`.
 
 ```javascript
   import React from 'react'
-  import { Button, Box } from '@adminjs/design-system'
+  import { Button, Box } from '@clement_lores/admin-design-system'
 
   const ValueTrigger = (props) => {
     const { onChange, record } = props

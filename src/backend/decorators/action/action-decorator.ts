@@ -1,4 +1,4 @@
-import { DEFAULT_DRAWER_WIDTH, VariantType } from '@adminjs/design-system'
+import { DEFAULT_DRAWER_WIDTH, VariantType } from '@clement_lores/admin-design-system'
 
 import ConfigurationError from '../../utils/errors/configuration-error.js'
 import ViewHelpers from '../../utils/view-helpers/view-helpers.js'

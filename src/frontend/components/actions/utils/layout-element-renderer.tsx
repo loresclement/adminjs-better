@@ -1,5 +1,5 @@
 import React from 'react'
-import * as DesignSystem from '@adminjs/design-system'
+import * as DesignSystem from '@clement_lores/admin-design-system'
 
 import { ActionProps } from '../action.props.js'
 import BasePropertyComponent from '../../property-type/index.js'
@@ -38,7 +38,7 @@ export const LayoutElementRenderer: React.FC<Props> = (props) => {
       >
         There is no component by the name of
         <DesignSystem.Badge size="sm" variant="danger" mx="default">{component}</DesignSystem.Badge>
-        in @adminjs/design-system. Change
+        in @clement_lores/admin-design-system. Change
         <DesignSystem.Badge size="sm" variant="danger" mx="default">{`@${component}`}</DesignSystem.Badge>
         to available component like @Header
       </DesignSystem.MessageBox>

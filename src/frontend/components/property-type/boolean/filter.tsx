@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormGroup, Select } from '@adminjs/design-system'
+import { FormGroup, Select } from '@clement_lores/admin-design-system'
 
 import mapValue from './map-value.js'
 import { FilterPropertyProps } from '../base-property-props.js'

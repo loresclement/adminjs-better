@@ -1,4 +1,4 @@
-import { formatCurrencyProperty } from '@adminjs/design-system'
+import { formatCurrencyProperty } from '@clement_lores/admin-design-system'
 
 const optionsKeys: string[] = [
   'value',

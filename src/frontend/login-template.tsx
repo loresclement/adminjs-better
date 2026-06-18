@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { combineStyles } from '@adminjs/design-system'
+import { combineStyles } from '@clement_lores/admin-design-system'
 import { Store } from 'redux'
 
 import createStore, {

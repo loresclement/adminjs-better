@@ -1,4 +1,4 @@
-import { Modal } from '@adminjs/design-system'
+import { Modal } from '@clement_lores/admin-design-system'
 import React, { FC } from 'react'
 import { useSelector } from 'react-redux'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { TableCell } from '@adminjs/design-system'
+import { TableCell } from '@clement_lores/admin-design-system'
 
 import { BasePropertyJSON } from '../../../interfaces/index.js'
 import SortLink from '../sort-link.js'

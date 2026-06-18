@@ -1,4 +1,4 @@
-import { PhoneInput, PhoneInputProps, FormGroup } from '@adminjs/design-system'
+import { PhoneInput, PhoneInputProps, FormGroup } from '@clement_lores/admin-design-system'
 import React, { FC, useCallback } from 'react'
 
 import { FilterPropertyProps } from '../base-property-props.js'

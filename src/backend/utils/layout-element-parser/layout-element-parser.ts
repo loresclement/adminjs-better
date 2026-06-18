@@ -8,7 +8,7 @@ import {
   LinkProps,
   LabelProps,
   IconProps,
-} from '@adminjs/design-system'
+} from '@clement_lores/admin-design-system'
 import { PropsWithChildren } from 'react'
 
 import { CurrentAdmin } from '../../../current-admin.interface.js'

@@ -1,6 +1,6 @@
 {
-  "name": "adminjs",
-  "version": "7.8.17",
+  "name": "@clement_lores/adminjs",
+  "version": "7.8.29",
   "description": "Admin panel for apps written in node.js",
   "type": "module",
   "exports": {
@@ -24,7 +24,8 @@
     "cspell": "cspell src/**/*.ts src/**/*.js src/**/*.tsx src/**/*.jsx",
     "check:all": "yarn types && yarn cspell && yarn lint && yarn test && yarn bundle && NODE_ENV=production yarn bundle",
     "dev": "yarn build && yarn types && yarn bundle:globals && yarn bundle && NODE_ENV=production yarn bundle:globals && NODE_ENV=production yarn bundle",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "build:publish": "rm -rf node_modules yarn.lock && yarn install && yarn build && yarn types && yarn bundle:globals && yarn bundle && NODE_ENV=production yarn bundle:globals && NODE_ENV=production yarn bundle && npm publish --access public"
   },
   "bin": {
     "admin": "./cli.js"
@@ -85,7 +86,6 @@
   },
   "homepage": "https://github.com/SoftwareBrothers/adminjs#readme",
   "dependencies": {
-    "@adminjs/design-system": "^4.1.1",
     "@babel/core": "^7.23.9",
     "@babel/parser": "^7.23.9",
     "@babel/plugin-syntax-import-assertions": "^7.23.3",
@@ -94,10 +94,11 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.23.7",
+    "@clement_lores/admin-design-system": "^1.0.3",
     "@hello-pangea/dnd": "^16.2.0",
     "@redux-devtools/extension": "^3.2.5",
     "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
@@ -107,7 +108,7 @@
     "i18next-browser-languagedetector": "^8.2.1",
     "i18next-http-backend": "^4.0.0",
     "lodash": "^4.18.1",
-    "ora": "^9.4.0",
+    "ora": "^6.2.0",
     "prop-types": "^15.8.1",
     "punycode": "^2.3.1",
     "qs": "^6.11.1",
@@ -135,7 +136,7 @@
     "@types/babel-core": "^6.25.10",
     "@types/chai": "^4.3.4",
     "@types/chai-as-promised": "^7.1.5",
-    "@types/factory-girl": "^5.0.8",
+    "@types/factory-girl": "^5.0.12",
     "@types/flat": "^5.0.5",
     "@types/lodash": "^4.17.24",
     "@types/mocha": "^10.0.10",
@@ -170,7 +171,7 @@
     "semantic-release": "^25.0.5",
     "sinon": "^15.0.2",
     "sinon-chai": "^3.7.0",
-    "ts-node": "10.8.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "resolutions": {

@@ -13,14 +13,21 @@ export class AssetBundler {
     react: 'React',
     redux: 'Redux',
     'react-feather': 'FeatherIcons',
-    '@adminjs/design-system/styled-components': 'styled',
     'prop-types': 'PropTypes',
     'react-dom': 'ReactDOM',
     'react-redux': 'ReactRedux',
     'react-router': 'ReactRouter',
     'react-router-dom': 'ReactRouterDOM',
+    'react-dom/client': 'ReactDOM',
+
     adminjs: 'AdminJS',
+    '@clement_lores/adminjs': 'AdminJS',
+
     '@adminjs/design-system': 'AdminJSDesignSystem',
+    '@adminjs/design-system/styled-components': 'styled',
+
+    '@clement_lores/admin-design-system': 'AdminJSDesignSystem',
+    '@clement_lores/admin-design-system/styled-components': 'styled',
   }
 
   static DEFAULT_EXTERNALS = [
@@ -31,10 +38,17 @@ export class AssetBundler {
     'react-redux',
     'react-router',
     'react-router-dom',
-    '@adminjs/design-system/styled-components',
-    'adminjs',
-    '@adminjs/design-system',
     'react-feather',
+    'react-dom/client',
+
+    'adminjs',
+    '@clement_lores/adminjs',
+
+    '@adminjs/design-system',
+    '@adminjs/design-system/styled-components',
+
+    '@clement_lores/admin-design-system',
+    '@clement_lores/admin-design-system/styled-components',
   ]
 
   protected inputOptions: InputOptions = {}
@@ -53,27 +67,53 @@ export class AssetBundler {
   }
 
   public async watch() {
-    const bundle = await rollup(this.inputOptions)
-
     const spinner = ora(`Bundling files in watchmode: ${JSON.stringify(this.inputOptions)}`)
+
+    console.log('[AssetBundler.watch] inputOptions:', this.inputOptions)
+    console.log('[AssetBundler.watch] outputOptions:', this.outputOptions)
+    console.log('[AssetBundler.watch] before rollup.watch')
 
     const watcher = watch({
       ...this.inputOptions,
       output: this.outputOptions,
+      watch: {
+        exclude: [
+          'node_modules/**',
+          'lib/**',
+          'dist/**',
+          'types/**'
+        ],
+      },
     })
 
+    console.log('[AssetBundler.watch] after rollup.watch')
+
     watcher.on('event', (event) => {
+      console.log('[AssetBundler.watch event]', event.code)
+
       if (event.code === 'START') {
         spinner.start('Bundling files...')
       }
+
+      if (event.code === 'BUNDLE_START') {
+        console.log('[AssetBundler.watch] bundle start:', event.input)
+      }
+
+      if (event.code === 'BUNDLE_END') {
+        console.log('[AssetBundler.watch] bundle end:', event.output)
+
+        if (event.result) {
+          event.result.close()
+        }
+      }
+
       if (event.code === 'ERROR') {
         spinner.fail('Bundle fail:')
-        // eslint-disable-next-line no-console
-        console.log(event)
+        console.error(event.error ?? event)
       }
 
       if (event.code === 'END') {
-        spinner.succeed(`Finish bundling: ${bundle.watchFiles.length} files`)
+        spinner.succeed('Finish bundling')
       }
     })
   }

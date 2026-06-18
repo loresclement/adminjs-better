@@ -1,4 +1,4 @@
-import { Loader, Table, TableBody } from '@adminjs/design-system'
+import { Loader, Table, TableBody } from '@clement_lores/admin-design-system'
 import React from 'react'
 
 import { ActionResponse } from '../../../../backend/actions/action.interface.js'

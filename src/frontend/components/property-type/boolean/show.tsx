@@ -1,5 +1,5 @@
 import React from 'react'
-import { ValueGroup } from '@adminjs/design-system'
+import { ValueGroup } from '@clement_lores/admin-design-system'
 
 import BooleanPropertyValue from './boolean-property-value.js'
 import { ShowPropertyProps } from '../base-property-props.js'

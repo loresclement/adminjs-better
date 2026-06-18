@@ -1,6 +1,6 @@
 import React from 'react'
 import { Trans } from 'react-i18next'
-import { MessageBox, Link } from '@adminjs/design-system'
+import { MessageBox, Link } from '@clement_lores/admin-design-system'
 
 import ErrorBoundary from './error-boundary.js'
 import { actions } from '../actions/index.js'
