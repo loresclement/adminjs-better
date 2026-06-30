@@ -13,7 +13,7 @@ Let's create simple React component with button to fire modal example.
 We will change `openModal` props to demonstrate modal usage
 
 ```javascript
-import { Box, Button, Input, Label, Text, TextArea } from '@adminjs/design-system'
+import { Box, Button, Input, Label, Text, TextArea } from '@clement_lores/admin-design-system'
 import { useModal } from 'adminjs'
 import React from 'react'
 

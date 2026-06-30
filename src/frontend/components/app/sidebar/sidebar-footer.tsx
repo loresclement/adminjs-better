@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, MadeWithLove } from '@adminjs/design-system'
+import { Box, MadeWithLove } from '@clement_lores/admin-design-system'
 import { useSelector } from 'react-redux'
 
 import { BrandingOptions } from '../../../../adminjs-options.interface.js'

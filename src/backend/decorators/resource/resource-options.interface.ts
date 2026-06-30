@@ -1,4 +1,4 @@
-import type { IconProps } from '@adminjs/design-system'
+import type { IconProps } from '@clement_lores/admin-design-system'
 
 import { Action, ActionResponse, RecordActionResponse, BulkActionResponse } from '../../actions/action.interface.js'
 import PropertyOptions from '../property/property-options.interface.js'

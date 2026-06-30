@@ -1,5 +1,6 @@
 import * as path from 'path'
 import AdminJS from '../../adminjs.js'
+import slash from '../../utils/slash/index.js'
 
 const toPosixPath = (p: string): string => p.replace(/\\/g, '/')
 
@@ -23,7 +24,11 @@ const generateUserComponentEntry = (admin: AdminJS, entryPath: string): string =
 
   const absoluteEntryPath = path.resolve(entryPath)
 
-  const setupPart = 'AdminJS.UserComponents = {}\n'
+  const setupPart = [
+    "import AdminJS from '@clement_lores/adminjs'",
+    'AdminJS.UserComponents = {}',
+    '',
+  ].join('\n')
 
   const envPart = Object.keys(env).map((envKey) => (
     `AdminJS.env.${envKey} = ${JSON.stringify(env[envKey])}\n`

@@ -1,4 +1,4 @@
-import { CheckBox, TableCell, TableHead, TableRow } from '@adminjs/design-system'
+import { CheckBox, TableCell, TableHead, TableRow } from '@clement_lores/admin-design-system'
 import React from 'react'
 
 import allowOverride from '../../../hoc/allow-override.js'

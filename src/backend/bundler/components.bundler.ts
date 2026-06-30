@@ -12,9 +12,15 @@ import presetTs from '@babel/preset-typescript'
 import { AssetBundler } from './utils/asset-bundler.js'
 import { COMPONENTS_ENTRY_PATH, COMPONENTS_OUTPUT_PATH, NODE_ENV } from './utils/constants.js'
 
+console.log('[AdminJS bundler] components bundler start')
+
 const input: InputOptions = {
   input: COMPONENTS_ENTRY_PATH,
-  external: AssetBundler.DEFAULT_EXTERNALS,
+  external: (id: string) => {
+    return AssetBundler.DEFAULT_EXTERNALS.some((pkg) => {
+      return id === pkg || id.startsWith(`${pkg}/`)
+    })
+  },
   plugins: [
     resolve({
       extensions: AssetBundler.DEFAULT_EXTENSIONS,

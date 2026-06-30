@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, FormGroup, Input, Box, ValueGroup } from '@adminjs/design-system'
+import { Section, FormGroup, Input, Box, ValueGroup } from '@clement_lores/admin-design-system'
 
 import { ShowPropertyProps } from '../base-property-props.js'
 import { flat } from '../../../../utils/flat/index.js'

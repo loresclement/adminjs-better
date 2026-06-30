@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import type { Theme } from '@adminjs/design-system'
+import type { Theme } from '@clement_lores/admin-design-system'
 import type { FC } from 'react'
 
 import type { ReduxState } from '../src/frontend/store/store.js'

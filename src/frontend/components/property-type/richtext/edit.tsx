@@ -1,4 +1,4 @@
-import { FormGroup, FormMessage, RichTextEditor, TinyMCE } from '@adminjs/design-system'
+import { FormGroup, FormMessage, RichTextEditor, TinyMCE } from '@clement_lores/admin-design-system'
 import React, { FC, memo, useCallback } from 'react'
 
 import { EditPropertyProps } from '../base-property-props.js'

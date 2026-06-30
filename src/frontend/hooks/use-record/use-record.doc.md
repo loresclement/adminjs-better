@@ -25,7 +25,7 @@ You can use `useRecord` hook to do all of this.
 This is how `CommentComponent` from the previous example could look like:
 
 ```javascript
-import { BasePropertyComponent, useRecord, Box, useTranslation } from '@adminjs/design-system'
+import { BasePropertyComponent, useRecord, Box, useTranslation } from '@clement_lores/admin-design-system'
 
 const MyRecordActionComponent = (props) => {
   const { record: initialRecord, resource, action } = props

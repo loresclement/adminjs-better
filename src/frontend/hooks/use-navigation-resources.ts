@@ -4,7 +4,7 @@ import type {
   IconProps,
   NavigationElementWithChildrenProps,
   NavigationProps,
-} from '@adminjs/design-system'
+} from '@clement_lores/admin-design-system'
 import { useMemo } from 'react'
 
 import { useTranslation } from '../hooks/use-translation.js'

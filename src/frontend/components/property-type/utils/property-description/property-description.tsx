@@ -1,4 +1,4 @@
-import { Box, Icon, Tooltip } from '@adminjs/design-system'
+import { Box, Icon, Tooltip } from '@clement_lores/admin-design-system'
 import React from 'react'
 
 import { PropertyJSON } from '../../../../interfaces/index.js'

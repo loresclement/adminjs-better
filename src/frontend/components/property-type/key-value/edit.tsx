@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Section, FormGroup, FormMessage, Button, Input, Box, Icon } from '@adminjs/design-system'
+import { Section, FormGroup, FormMessage, Button, Input, Box, Icon } from '@clement_lores/admin-design-system'
 
 import { PropertyJSON } from '../../../interfaces/property-json/index.js'
 import { EditPropertyProps } from '../base-property-props.js'

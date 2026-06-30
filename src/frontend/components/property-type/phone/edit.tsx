@@ -1,4 +1,4 @@
-import { PhoneInput, PhoneInputProps, FormGroup, FormMessage } from '@adminjs/design-system'
+import { PhoneInput, PhoneInputProps, FormGroup, FormMessage } from '@clement_lores/admin-design-system'
 import React, { FC, memo, useEffect, useState } from 'react'
 
 import { EditPropertyProps } from '../base-property-props.js'

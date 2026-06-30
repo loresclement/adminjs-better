@@ -6,7 +6,7 @@ import {
   DropDownMenu,
   DropDownTrigger,
   Icon,
-} from '@adminjs/design-system'
+} from '@clement_lores/admin-design-system'
 import React, { FC, useMemo } from 'react'
 import { useTranslation } from '../../../hooks/index.js'
 

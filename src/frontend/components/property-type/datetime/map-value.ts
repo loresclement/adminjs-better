@@ -1,4 +1,4 @@
-import { formatDateProperty } from '@adminjs/design-system'
+import { formatDateProperty } from '@clement_lores/admin-design-system'
 
 import { PropertyType } from '../../../../backend/adapters/property/base-property.js'
 import { stripTimeFromISO } from './strip-time-from-iso.js'

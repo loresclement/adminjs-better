@@ -14,6 +14,8 @@ import { NODE_ENV } from './utils/constants.js'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
+console.log('[AdminJS bundler] globals bundler start')
+
 const input: InputOptions = {
   input: path.join(__dirname, '../../frontend/global-entry.js'),
   plugins: [
@@ -47,7 +49,7 @@ const output: OutputOptions = {
     axios: 'axios',
     punycode: 'punycode',
     uuid: 'uuid',
-    '@adminjs/design-system/styled-components': 'styled',
+    '@clement_lores/admin-design-system/styled-components': 'styled',
     'react-dom': 'ReactDOM',
     'prop-types': 'PropTypes',
     'react-redux': 'ReactRedux',

@@ -2,9 +2,9 @@ import React, { useEffect, ReactNode, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { createPortal } from 'react-dom'
 import { createRoot } from 'react-dom/client'
-import { Drawer, DEFAULT_DRAWER_WIDTH } from '@adminjs/design-system'
-// @ts-ignore Note: Ignore while @adminjs/design-system/styled-components doesn't export types
-import { ThemeProvider } from '@adminjs/design-system/styled-components'
+import { Drawer, DEFAULT_DRAWER_WIDTH } from '@clement_lores/admin-design-system'
+// @ts-ignore Note: Ignore while @clement_lores/admin-design-system/styled-components doesn't export types
+import { ThemeProvider } from '@clement_lores/admin-design-system/styled-components'
 
 import { ReduxState, RouterInState } from '../../store/index.js'
 import { setDrawerPreRoute } from '../../store/actions/set-drawer-preroute.js'

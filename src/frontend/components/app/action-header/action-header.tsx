@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Badge, Box, ButtonGroup, cssClass, H2, H3 } from '@adminjs/design-system'
+import { Badge, Box, ButtonGroup, cssClass, H2, H3 } from '@clement_lores/admin-design-system'
 import React from 'react'
 import { useNavigate, useLocation } from 'react-router'
 

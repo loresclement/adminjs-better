@@ -1,4 +1,4 @@
-import { ButtonGroupProps, ButtonInGroupProps } from '@adminjs/design-system'
+import { ButtonGroupProps, ButtonInGroupProps } from '@clement_lores/admin-design-system'
 
 import { actionHref, ActionJSON, buildActionTestId, ModalFunctions } from '../../../interfaces/index.js'
 import { DifferentActionParams } from '../../../hooks/index.js'

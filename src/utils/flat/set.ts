@@ -1,4 +1,4 @@
-import flat from 'flat'
+import {flatten} from 'flat'
 
 import { DELIMITER } from './constants.js'
 import { FlattenParams } from './flat.types.js'
@@ -36,7 +36,7 @@ const set = (params: FlattenParams = {}, propertyPath: string, value?: any): Fla
 
   if (typeof value !== 'undefined') {
     if (isObject(value) && !(value instanceof Date)) {
-      const flattened = flat.flatten(value) as any
+      const flattened = flatten(value) as any
 
       if (Object.keys(flattened).length) {
         Object.keys(flattened).forEach((key) => {

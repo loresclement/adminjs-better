@@ -1,4 +1,4 @@
-import { Box, MessageBox, MessageBoxProps } from '@adminjs/design-system'
+import { Box, MessageBox, MessageBoxProps } from '@clement_lores/admin-design-system'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { connect } from 'react-redux'
 

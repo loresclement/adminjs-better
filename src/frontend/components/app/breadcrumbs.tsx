@@ -1,5 +1,5 @@
-import { Box, cssClass, Text } from '@adminjs/design-system'
-import { styled } from '@adminjs/design-system/styled-components'
+import { Box, cssClass, Text } from '@clement_lores/admin-design-system'
+import { styled } from '@clement_lores/admin-design-system/styled-components'
 import React from 'react'
 import { Link } from 'react-router-dom'
 

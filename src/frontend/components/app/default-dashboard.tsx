@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box, Button, H2, H5, Illustration, IllustrationProps, Text } from '@adminjs/design-system'
-import { styled } from '@adminjs/design-system/styled-components'
+import { Box, Button, H2, H5, Illustration, IllustrationProps, Text } from '@clement_lores/admin-design-system'
+import { styled } from '@clement_lores/admin-design-system/styled-components'
 
 import { useTranslation } from '../../hooks/index.js'
 import RocketSVG from './utils/rocket-svg.js'

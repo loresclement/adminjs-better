@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { cssClass, themeGet } from '@adminjs/design-system'
-import { styled } from '@adminjs/design-system/styled-components'
+import { cssClass, themeGet } from '@clement_lores/admin-design-system'
+import { styled } from '@clement_lores/admin-design-system/styled-components'
 
 import ViewHelpers from '../../../../backend/utils/view-helpers/view-helpers.js'
 import { BrandingOptions } from '../../../../adminjs-options.interface.js'

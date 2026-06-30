@@ -1,4 +1,4 @@
-import { CurrencyInput, CurrencyInputProps, FormGroup } from '@adminjs/design-system'
+import { CurrencyInput, CurrencyInputProps, FormGroup } from '@clement_lores/admin-design-system'
 import React, { FC } from 'react'
 
 import { EditPropertyProps } from '../base-property-props.js'

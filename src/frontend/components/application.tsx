@@ -1,7 +1,7 @@
 /* eslint-disable react/no-children-prop */
 import React, { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Box, Overlay } from '@adminjs/design-system'
+import { Box, Overlay } from '@clement_lores/admin-design-system'
 import { useLocation } from 'react-router'
 
 import ViewHelpers from '../../backend/utils/view-helpers/view-helpers.js'

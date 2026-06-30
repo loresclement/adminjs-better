@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { DatePicker, FormGroup, FormMessage } from '@adminjs/design-system'
+import { DatePicker, FormGroup, FormMessage } from '@clement_lores/admin-design-system'
 
 import { EditPropertyProps } from '../base-property-props.js'
 import { recordPropertyIsEqual } from '../record-property-is-equal.js'

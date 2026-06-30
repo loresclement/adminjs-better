@@ -1,4 +1,4 @@
-import { ButtonGroupProps } from '@adminjs/design-system'
+import { ButtonGroupProps } from '@clement_lores/admin-design-system'
 import { expect } from 'chai'
 import i18n from 'i18next'
 import { factory } from 'factory-girl'

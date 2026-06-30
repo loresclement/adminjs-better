@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Loader } from '@adminjs/design-system'
+import { Loader } from '@clement_lores/admin-design-system'
 import { useLocation, useParams } from 'react-router'
 
 import { BulkActionParams } from '../../../backend/utils/view-helpers/view-helpers.js'

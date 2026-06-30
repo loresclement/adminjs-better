@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FormGroup, SelectAsync } from '@adminjs/design-system'
+import { FormGroup, SelectAsync } from '@clement_lores/admin-design-system'
 
 import ApiClient from '../../../utils/api-client.js'
 import { FilterPropertyProps, SelectRecord } from '../base-property-props.js'

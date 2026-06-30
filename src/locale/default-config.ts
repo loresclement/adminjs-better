@@ -27,7 +27,4 @@ export const defaultConfig: InitOptions = {
   },
   resources: {},
   parseMissingKeyHandler: (key, defaultValue) => defaultValue ?? startCase(key),
-  get initImmediate(): boolean {
-    return typeof window !== 'undefined'
-  },
 }

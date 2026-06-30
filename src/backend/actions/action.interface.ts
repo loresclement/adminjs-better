@@ -1,4 +1,4 @@
-import { IconProps, VariantType } from '@adminjs/design-system'
+import { IconProps, VariantType } from '@clement_lores/admin-design-system'
 
 import AdminJS from '../../adminjs.js'
 import { CurrentAdmin } from '../../current-admin.interface.js'
