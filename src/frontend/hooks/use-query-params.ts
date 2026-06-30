@@ -1,8 +1,97 @@
 /* eslint-disable no-unused-vars */
 import pick from 'lodash/pick.js'
-import { parse, stringify } from 'qs'
 import { useMemo } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
+
+const normalizeKeyPath = (key: string): Array<string> => key
+  .replace(/\]/g, '')
+  .replace(/\[/g, '.')
+  .split('.')
+  .filter(Boolean)
+
+const assignNestedValue = (
+  target: Record<string, unknown>,
+  keyPath: Array<string>,
+  value: string,
+): void => {
+  const path = normalizeKeyPath(keyPath.join('.'))
+  if (!path.length) {
+    return
+  }
+
+  let current: Record<string, unknown> = target
+
+  for (let i = 0; i < path.length - 1; i += 1) {
+    const segment = path[i]
+    const next = current[segment]
+
+    if (!next || typeof next !== 'object' || Array.isArray(next)) {
+      current[segment] = {}
+    }
+
+    current = current[segment] as Record<string, unknown>
+  }
+
+  const finalKey = path[path.length - 1]
+  const existing = current[finalKey]
+
+  if (existing === undefined) {
+    current[finalKey] = value
+    return
+  }
+
+  if (Array.isArray(existing)) {
+    existing.push(value)
+    return
+  }
+
+  current[finalKey] = [existing, value]
+}
+
+const parseQueryString = (queryString: string): Record<string, unknown> => {
+  const parsed: Record<string, unknown> = {}
+
+  Array.from(new URLSearchParams(queryString).entries()).forEach(([key, value]) => {
+    assignNestedValue(parsed, [key], value)
+  })
+
+  return parsed
+}
+
+const appendQueryValue = (searchParams: URLSearchParams, key: string, value: unknown): void => {
+  if (value === undefined || value === null) {
+    return
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((entry) => appendQueryValue(searchParams, key, entry))
+    return
+  }
+
+  if (value instanceof Date) {
+    searchParams.append(key, value.toISOString())
+    return
+  }
+
+  if (typeof value === 'object') {
+    Object.entries(value as Record<string, unknown>).forEach(([nestedKey, nestedValue]) => {
+      appendQueryValue(searchParams, `${key}.${nestedKey}`, nestedValue)
+    })
+    return
+  }
+
+  searchParams.append(key, String(value))
+}
+
+const stringifyQuery = (query: Record<string, unknown>): string => {
+  const searchParams = new URLSearchParams()
+
+  Object.entries(query).forEach(([key, value]) => {
+    appendQueryValue(searchParams, key, value)
+  })
+
+  return searchParams.toString()
+}
 
 // eslint-disable-next-line no-shadow
 export enum QueryParams {
@@ -38,9 +127,7 @@ export function useQueryParams<
   const [searchParams, setSearchParams] = useSearchParams()
 
   const parsedQuery = useMemo(
-    () => parse(searchParams.toString(), {
-      allowDots: true,
-    }) as unknown as Params<ParamsT, FiltersT>,
+    () => parseQueryString(searchParams.toString()) as unknown as Params<ParamsT, FiltersT>,
     [searchParams, pathname],
   )
   const { sortBy, direction, page, tab, filters, redirectUrl } = parsedQuery
@@ -57,10 +144,7 @@ export function useQueryParams<
 
   function storeParams(params: Partial<Params<ParamsT, FiltersT>>) {
     setSearchParams(
-      stringify(
-        { sortBy, direction, page, tab, filters, redirectUrl, ...params },
-        { allowDots: true },
-      ),
+      stringifyQuery({ sortBy, direction, page, tab, filters, redirectUrl, ...params }),
     )
   }
 

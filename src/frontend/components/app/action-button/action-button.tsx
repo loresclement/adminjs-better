@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import { stringify } from 'qs'
 
 import { ActionResponse } from '../../../../backend/actions/action.interface.js'
 import allowOverride from '../../../hoc/allow-override.js'
@@ -25,6 +24,45 @@ export type ActionButtonProps = {
   children?: React.ReactNode
   search?: string
   queryParams?: Record<string, unknown>
+}
+
+const appendQueryParam = (searchParams: URLSearchParams, key: string, value: unknown): void => {
+  if (value === undefined || value === null) {
+    return
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((entry) => appendQueryParam(searchParams, key, entry))
+    return
+  }
+
+  if (value instanceof Date) {
+    searchParams.append(key, value.toISOString())
+    return
+  }
+
+  if (typeof value === 'object') {
+    Object.entries(value as Record<string, unknown>).forEach(([nestedKey, nestedValue]) => {
+      appendQueryParam(searchParams, `${key}[${nestedKey}]`, nestedValue)
+    })
+    return
+  }
+
+  searchParams.append(key, String(value))
+}
+
+const stringifyQueryParams = (queryParams?: Record<string, unknown>): string => {
+  if (!queryParams) {
+    return ''
+  }
+
+  const searchParams = new URLSearchParams()
+  Object.entries(queryParams).forEach(([key, value]) => {
+    appendQueryParam(searchParams, key, value)
+  })
+
+  const serialized = searchParams.toString()
+  return serialized ? `?${serialized}` : ''
 }
 
 /**
@@ -57,7 +95,7 @@ const ActionButton: React.FC<ActionButtonProps> = (props) => {
       resourceId,
       recordId,
       recordIds,
-      search: stringify(queryParams, { addQueryPrefix: true }) || search,
+      search: stringifyQueryParams(queryParams) || search,
     },
     actionPerformed,
   )

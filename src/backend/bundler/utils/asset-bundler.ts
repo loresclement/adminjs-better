@@ -2,7 +2,6 @@
 import { readFile, mkdir, writeFile } from 'fs/promises'
 import { rollup, watch, InputOptions, OutputOptions } from 'rollup'
 import isUndefined from 'lodash/isUndefined.js'
-import ora from 'ora'
 
 import { ADMIN_JS_TMP_DIR, NODE_ENV } from './constants.js'
 
@@ -67,7 +66,7 @@ export class AssetBundler {
   }
 
   public async watch() {
-    const spinner = ora(`Bundling files in watchmode: ${JSON.stringify(this.inputOptions)}`)
+    console.log(`Bundling files in watchmode: ${JSON.stringify(this.inputOptions)}`)
 
     console.log('[AssetBundler.watch] inputOptions:', this.inputOptions)
     console.log('[AssetBundler.watch] outputOptions:', this.outputOptions)
@@ -92,7 +91,7 @@ export class AssetBundler {
       console.log('[AssetBundler.watch event]', event.code)
 
       if (event.code === 'START') {
-        spinner.start('Bundling files...')
+        console.log('Bundling files...')
       }
 
       if (event.code === 'BUNDLE_START') {
@@ -108,12 +107,12 @@ export class AssetBundler {
       }
 
       if (event.code === 'ERROR') {
-        spinner.fail('Bundle fail:')
+        console.error('Bundle fail:')
         console.error(event.error ?? event)
       }
 
       if (event.code === 'END') {
-        spinner.succeed('Finish bundling')
+        console.log('Finish bundling')
       }
     })
   }
