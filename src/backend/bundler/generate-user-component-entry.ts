@@ -2,6 +2,8 @@ import * as path from 'path'
 import AdminJS from '../../adminjs.js'
 import slash from '../../utils/slash/index.js'
 
+const toPosixPath = (p: string): string => p.replace(/\\/g, '/')
+
 /**
  * Generates entry file for all UsersComponents.
  * Entry consists of 3 parts:
@@ -37,7 +39,7 @@ const generateUserComponentEntry = (admin: AdminJS, entryPath: string): string =
       components[componentId],
     )
     return [
-      `import ${componentId} from '${slash(componentUrl)}'`,
+      `import ${componentId} from '${toPosixPath(componentUrl)}'`,
       `AdminJS.UserComponents.${componentId} = ${componentId}`,
     ].join('\n')
   }).join('\n')
