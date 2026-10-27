@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect, use } from 'chai'
 import sinon from 'sinon'
 import chaiAsPromised from 'chai-as-promised'
 
@@ -9,7 +9,7 @@ import BaseRecord from '../record/base-record.js'
 import AdminJS from '../../../adminjs.js'
 import ResourceDecorator from '../../decorators/resource/resource-decorator.js'
 
-chai.use(chaiAsPromised)
+use(chaiAsPromised)
 
 describe('BaseResource', function () {
   let resource: BaseResource

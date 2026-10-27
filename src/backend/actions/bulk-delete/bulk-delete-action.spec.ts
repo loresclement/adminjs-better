@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect, use } from 'chai'
 import chaiAsPromised from 'chai-as-promised'
 import sinon from 'sinon'
 
@@ -13,7 +13,7 @@ import NotFoundError from '../../utils/errors/not-found-error.js'
 import { RecordJSON } from '../../../frontend/interfaces/index.js'
 import { CurrentAdmin } from '../../../current-admin.interface.js'
 
-chai.use(chaiAsPromised)
+use(chaiAsPromised)
 
 describe('BulkDeleteAction', function () {
   let data: ActionContext

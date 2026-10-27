@@ -141,7 +141,6 @@ const translate = (
   resourceId?: string | TOptions,
   options: TOptions = {},
 ): string => {
-  // cspell:disable-next-line
   if (i18n.language === 'cimode') return [key, name].join('.')
 
   let realOptions: TOptions = { ...options, defaultValue: options.defaultValue ?? startCase(name) }

@@ -1,6 +1,5 @@
-import {flatten} from 'flat'
-
 import { FlattenParams } from './flat.types.js'
+import { flatten } from './flatten.js'
 import { set } from './set.js'
 
 /**

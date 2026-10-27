@@ -2,7 +2,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 import i18n, { InitOptions } from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import Backend from 'i18next-http-backend'
+import Backend from 'i18next-http-backend/esm'
 import intersection from 'lodash/intersection.js'
 import merge from 'lodash/merge.js'
 import { initReactI18next } from 'react-i18next'

@@ -37,12 +37,12 @@ describe('<PropertyHeader />', function () {
   let property: PropertyJSON
 
   beforeEach(async function () {
-    property = await factory.build<PropertyJSON>('PropertyJSON', { isSortable: true })
-    factory.resetSequence('property.label')
-  })
-
-  afterEach(function () {
-    factory.resetSequence('property.label')
+    property = await factory.build<PropertyJSON>('PropertyJSON', {
+      isSortable: true,
+      label: 'someProperty2',
+      path: 'someProperty6',
+      propertyPath: 'someProperty6',
+    })
   })
 
   context('render not selected but searchable field', function () {

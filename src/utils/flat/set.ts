@@ -1,7 +1,6 @@
-import {flatten} from 'flat'
-
 import { DELIMITER } from './constants.js'
 import { FlattenParams } from './flat.types.js'
+import { flatten } from './flatten.js'
 import { propertyKeyRegex } from './property-key-regex.js'
 import { pathToParts } from './path-to-parts.js'
 

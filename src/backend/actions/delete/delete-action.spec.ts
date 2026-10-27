@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect, use } from 'chai'
 import chaiAsPromised from 'chai-as-promised'
 import sinon from 'sinon'
 
@@ -14,7 +14,7 @@ import { ValidationError } from '../../utils/errors/validation-error.js'
 import { RecordJSON } from '../../../frontend/interfaces/index.js'
 import { CurrentAdmin } from '../../../current-admin.interface.js'
 
-chai.use(chaiAsPromised)
+use(chaiAsPromised)
 
 describe('DeleteAction', function () {
   let data: ActionContext

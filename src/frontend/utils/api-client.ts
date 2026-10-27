@@ -210,9 +210,7 @@ class ApiClient {
    */
   async bulkAction(options: BulkActionAPIParams): Promise<AxiosResponse<BulkActionResponse>> {
     const { resourceId, recordIds, actionName, data, ...axiosParams } = options
-
-    const params = new URLSearchParams()
-    params.set('recordIds', (recordIds || []).join(','))
+    const params: Record<string, any> = { recordIds: (recordIds || []).join(',') }
 
     const response = await this.client.request({
       url: `/api/resources/${resourceId}/bulk/${actionName}`,

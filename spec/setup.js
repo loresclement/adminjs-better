@@ -2,16 +2,16 @@
 /* eslint-disable mocha/no-top-level-hooks */
 import { URLSearchParams } from 'url'
 
-import chai from 'chai'
+import { expect, use } from 'chai'
 import sinonChai from 'sinon-chai'
 import sinon from 'sinon'
 import jsdom from 'jsdom-global'
 
 process.env.NODE_ENV = 'test'
 
-chai.use(sinonChai)
+use(sinonChai)
 
-global.expect = chai.expect
+global.expect = expect
 global.URLSearchParams = URLSearchParams
 
 beforeEach(function () {

@@ -263,8 +263,6 @@ export type AdminJSSettings = {
   defaultPerPage: number;
 };
 
-/* cspell: enable */
-
 /**
  * @memberof AdminJSOptions
  * @alias Assets

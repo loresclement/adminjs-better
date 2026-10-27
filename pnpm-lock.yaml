@@ -63,9 +63,6 @@ importers:
       axios:
         specifier: ^1.15.0
         version: 1.15.0
-      flat:
-        specifier: ^5.0.2
-        version: 5.0.2
       i18next:
         specifier: ^22.4.13
         version: 22.5.1
@@ -163,9 +160,6 @@ importers:
       '@types/factory-girl':
         specifier: ^5.0.8
         version: 5.0.12
-      '@types/flat':
-        specifier: ^5.0.2
-        version: 5.0.5
       '@types/lodash':
         specifier: ^4.14.194
         version: 4.17.24
@@ -2005,9 +1999,6 @@ packages:
 
   '@types/factory-girl@5.0.12':
     resolution: {integrity: sha512-U0061t9TmGUgFEQeq8JFh+P0eyLTKKiO5W1lGj0n9QPB3X9m7kXN28jK92lUsTpL6ioTGqoe5YRIWAWfXc/Wqw==}
-
-  '@types/flat@5.0.5':
-    resolution: {integrity: sha512-nPLljZQKSnac53KDUDzuzdRfGI0TDb5qPrb+SrQyN3MtdQrOnGsKniHN1iYZsJEBIVQve94Y6gNz22sgISZq+Q==}
 
   '@types/hoist-non-react-statics@3.3.7':
     resolution: {integrity: sha512-PQTyIulDkIDro8P+IHbKCsw7U2xxBYflVzW/FgWdCAePD9xGSidgA76/GeJ6lBKoblyhf9pBY763gbrN+1dI8g==}
@@ -7577,7 +7568,6 @@ snapshots:
 
   '@types/factory-girl@5.0.12': {}
 
-  '@types/flat@5.0.5': {}
 
   '@types/hoist-non-react-statics@3.3.7(@types/react@18.3.28)':
     dependencies:

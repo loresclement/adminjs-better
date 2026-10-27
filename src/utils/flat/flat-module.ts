@@ -1,5 +1,3 @@
-import {flatten, unflatten} from 'flat'
-
 import { DELIMITER } from './constants.js'
 import { selectParams } from './select-params.js'
 import { filterOutParams } from './filter-out-params.js'
@@ -8,6 +6,7 @@ import { get } from './get.js'
 import { merge } from './merge.js'
 import { pathToParts } from './path-to-parts.js'
 import { removePath } from './remove-path.js'
+import { flatten, unflatten } from './flatten.js'
 
 export type FlatModuleType = {
   flatten: typeof flatten;
@@ -29,16 +28,10 @@ export type FlatModuleType = {
  * @load ./flat.doc.md
  */
 export const flat: FlatModuleType = {
-  /**
-   * Raw `flatten` function exported from original {@link https://www.npmjs.com/package/flat flat}
-   * package.
-   */
-  flatten: flatten,
-  /**
-   * Raw `unflatten` function exported from original {@link https://www.npmjs.com/package/flat flat}
-   * package.
-   */
-  unflatten: unflatten,
+  /** Flattens nested objects into dot-delimited parameter keys. */
+  flatten,
+  /** Reconstructs nested objects from dot-delimited parameter keys. */
+  unflatten,
 
   set,
   get,

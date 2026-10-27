@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect, use } from 'chai'
 import chaiChange from 'chai-change'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
@@ -12,9 +12,9 @@ import ValidationError, { PropertyErrors } from '../../utils/errors/validation-e
 import RecordError from '../../utils/errors/record-error.js'
 import { ActionDecorator, ResourceDecorator } from '../../decorators/index.js'
 
-chai.use(chaiAsPromised)
-chai.use(chaiChange)
-chai.use(sinonChai)
+use(chaiAsPromised)
+use(chaiChange)
+use(sinonChai)
 
 describe('Record', function () {
   let record: BaseRecord
