@@ -1,3 +1,6 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import type { TransformOptions as BabelConfig } from 'babel-core'
 
 import AdminJS from './adminjs.js'
@@ -156,7 +159,8 @@ export interface AdminJSOptions {
    * './node_modules/adminjs/lib/frontend/assets/scripts/global-bundle.production.js' to
    * './public/global.bundle.js'
    * * - copy
-   * './node_modules/adminjs/node_modules/@clement_lores/admin-design-system/bundle.production.js' to
+   * './node_modules/adminjs/node_modules/@clement_lores/admin-design-system/'
+   * 'bundle.production.js' to
    * './public/design-system.bundle.js'
    * - host entire public folder under some domain (if you use firebase - you can host them
    * with firebase hosting)

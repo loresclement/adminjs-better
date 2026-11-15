@@ -1,3 +1,6 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import merge from 'lodash/merge.js'
 import * as path from 'path'
 import * as fs from 'fs'
@@ -182,7 +185,6 @@ class AdminJS {
     console.log('[AdminJS watch] start')
 
     if (process.env.NODE_ENV !== 'production') {
-
       console.log('[AdminJS watch] before create entry')
       await componentsBundler.createEntry({
         content: generateEntry(this, ADMIN_JS_TMP_DIR),

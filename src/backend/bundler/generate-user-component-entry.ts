@@ -1,6 +1,8 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import * as path from 'path'
 import AdminJS from '../../adminjs.js'
-import slash from '../../utils/slash/index.js'
 
 const toPosixPath = (p: string): string => p.replace(/\\/g, '/')
 
@@ -25,7 +27,7 @@ const generateUserComponentEntry = (admin: AdminJS, entryPath: string): string =
   const absoluteEntryPath = path.resolve(entryPath)
 
   const setupPart = [
-    "import AdminJS from '@clement_lores/adminjs'",
+    'import AdminJS from \'@clement_lores/adminjs\'',
     'AdminJS.UserComponents = {}',
     '',
   ].join('\n')

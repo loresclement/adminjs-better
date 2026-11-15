@@ -1,9 +1,12 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import React, { useEffect, ReactNode, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { createPortal } from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import { Drawer, DEFAULT_DRAWER_WIDTH } from '@clement_lores/admin-design-system'
-// @ts-ignore Note: Ignore while @clement_lores/admin-design-system/styled-components doesn't export types
+// @ts-ignore Note: Ignore while the design-system styled-components entry lacks exported types
 import { ThemeProvider } from '@clement_lores/admin-design-system/styled-components'
 
 import { ReduxState, RouterInState } from '../../store/index.js'

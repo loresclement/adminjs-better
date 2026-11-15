@@ -1,3 +1,6 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import path from 'path'
 import { expect } from 'chai'
 import * as url from 'url'
@@ -89,6 +92,7 @@ describe('AdminJS', function () {
 
   describe('ComponentLoader', function () {
     const loader = new ComponentLoader()
+
     afterEach(function () {
       loader.clear()
     })
