@@ -1,3 +1,6 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import sortSetter from './sort-setter.js'
 
 describe('sortSetter', function () {
@@ -10,6 +13,7 @@ describe('sortSetter', function () {
       direction: overriddenDirection,
     },
   }
+
   it('returns query when it is passed', function () {
     const direction = 'asc'
     const sortBy = 'name'

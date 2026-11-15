@@ -1,6 +1,10 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 {
   "name": "@clement_lores/adminjs",
   "version": "7.8.30",
+  "packageManager": "yarn@1.22.22",
   "description": "Admin panel for apps written in node.js",
   "type": "module",
   "exports": {
@@ -102,7 +106,7 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
-    "axios": "^1.21.0",
+    "axios": "^1.21.1",
     "i18next": "^26.5.11",
     "i18next-browser-languagedetector": "^8.2.3",
     "i18next-http-backend": "^4.0.6",
@@ -167,9 +171,5 @@
     "sinon-chai": "^3.7.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
-  },
-  "resolutions": {
-    "react-redux": "8.0.5",
-    "redux": "4.2.1"
   }
 }

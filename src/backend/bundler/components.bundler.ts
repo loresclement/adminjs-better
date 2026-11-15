@@ -1,3 +1,6 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import { InputOptions, OutputOptions } from 'rollup'
 import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 import * as commonjs from '@rollup/plugin-commonjs'
@@ -16,11 +19,7 @@ console.log('[AdminJS bundler] components bundler start')
 
 const input: InputOptions = {
   input: COMPONENTS_ENTRY_PATH,
-  external: (id: string) => {
-    return AssetBundler.DEFAULT_EXTERNALS.some((pkg) => {
-      return id === pkg || id.startsWith(`${pkg}/`)
-    })
-  },
+  external: (id: string) => AssetBundler.DEFAULT_EXTERNALS.some((pkg) => id === pkg || id.startsWith(`${pkg}/`)),
   plugins: [
     resolve({
       extensions: AssetBundler.DEFAULT_EXTENSIONS,

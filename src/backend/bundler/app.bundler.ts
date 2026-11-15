@@ -1,3 +1,6 @@
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
+Failed to create stream fd: Operation not permitted
 import path from 'path'
 import * as url from 'url'
 
@@ -17,11 +20,7 @@ console.log('[AdminJS bundler] app bundler start')
 
 const input: InputOptions = {
   input: path.join(__dirname, '../../frontend/bundle-entry.js'),
-  external: (id: string) => {
-    return AssetBundler.DEFAULT_EXTERNALS.some((pkg) => {
-      return id === pkg || id.startsWith(`${pkg}/`)
-    })
-  },
+  external: (id: string) => AssetBundler.DEFAULT_EXTERNALS.some((pkg) => id === pkg || id.startsWith(`${pkg}/`)),
   plugins: [
     resolve({
       extensions: AssetBundler.DEFAULT_EXTENSIONS,
