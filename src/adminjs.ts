@@ -1,6 +1,3 @@
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
 import merge from 'lodash/merge.js'
 import * as path from 'path'
 import * as fs from 'fs'

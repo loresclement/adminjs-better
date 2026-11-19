@@ -1,6 +1,3 @@
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
 import { InputOptions, OutputOptions } from 'rollup'
 import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 import * as commonjs from '@rollup/plugin-commonjs'

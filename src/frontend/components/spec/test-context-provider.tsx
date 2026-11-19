@@ -1,8 +1,5 @@
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
 import React, { ReactNode } from 'react'
-import { StaticRouter } from 'react-router-dom/server.js'
+import { StaticRouter } from 'react-router'
 import { combineStyles } from '@clement_lores/admin-design-system'
 // @ts-ignore Note: Ignore while the design-system styled-components entry lacks exported types
 import { ThemeProvider } from '@clement_lores/admin-design-system/styled-components'

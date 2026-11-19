@@ -1,6 +1,3 @@
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
 /* eslint-disable import/no-extraneous-dependencies */
 import { readFile, mkdir, writeFile } from 'fs/promises'
 import { rollup, watch, InputOptions, OutputOptions } from 'rollup'

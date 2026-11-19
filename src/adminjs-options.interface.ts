@@ -1,6 +1,3 @@
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
 import type { TransformOptions as BabelConfig } from 'babel-core'
 
 import AdminJS from './adminjs.js'
